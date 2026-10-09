@@ -1,30 +1,30 @@
-# JDBC Project
+# Projeto JDBC
 
-A Java application developed as part of my studies in Java, following the **Java COMPLETO course by Nelio Alves on Udemy**.
+Uma aplicação Java desenvolvida como parte dos meus estudos em Java, acompanhando o curso **Java COMPLETO, de Nelio Alves, na Udemy**.
 
-The project was created for educational purposes to practice **Object-Oriented Programming, JDBC, MySQL, SQL, and the DAO design pattern**.
+O projeto foi criado com finalidade educacional para praticar **Programação Orientada a Objetos (POO), JDBC, MySQL, SQL e o padrão de projeto DAO**.
 
-## About
+## Sobre o Projeto
 
-This project demonstrates how a Java application can communicate with a relational database using **JDBC (Java Database Connectivity)**.
+Este projeto demonstra como uma aplicação Java pode se comunicar com um banco de dados relacional utilizando **JDBC (Java Database Connectivity)**.
 
-The application manages **sellers and departments** and implements database operations through the **DAO (Data Access Object)** pattern.
+A aplicação gerencia **vendedores e departamentos**, implementando operações de banco de dados por meio do padrão **DAO (Data Access Object)**.
 
-This repository represents a stage of my learning journey, where I practiced connecting a Java application to a MySQL database and implementing CRUD operations.
+O repositório representa uma etapa do meu aprendizado, na qual pratiquei a conexão de uma aplicação Java com um banco de dados MySQL e a implementação de operações CRUD.
 
-> **Educational project:** This project was developed while following the lessons and exercises from the Java course by Nelio Alves on Udemy.
+> **Projeto educacional:** desenvolvido durante o acompanhamento das aulas e dos exercícios do curso de Java de Nelio Alves, disponível na Udemy.
 
-## Technologies
+## Tecnologias Utilizadas
 
-* Java
-* JDBC
-* MySQL
-* SQL
-* Object-Oriented Programming (OOP)
-* DAO Pattern
-* Eclipse IDE
+- Java
+- JDBC
+- MySQL
+- SQL
+- Programação Orientada a Objetos (POO)
+- Padrão DAO
+- Eclipse IDE
 
-## Project Structure
+## Estrutura do Projeto
 
 ```text
 src/
@@ -49,134 +49,132 @@ src/
         └── Seller.java
 ```
 
-## Features
+## Funcionalidades
 
-### Seller
+### Vendedores (Seller)
 
-* Insert sellers
-* Update seller information
-* Delete sellers
-* Find a seller by ID
-* Find all sellers
-* Find sellers by department
+- Cadastrar vendedores.
+- Atualizar informações dos vendedores.
+- Excluir vendedores.
+- Buscar um vendedor pelo ID.
+- Listar todos os vendedores.
+- Buscar vendedores por departamento.
 
-### Department
+### Departamentos (Department)
 
-* Access department data through the DAO layer
-* Manage department information
-* Establish relationships between departments and sellers
+- Acessar os dados dos departamentos por meio da camada DAO.
+- Gerenciar informações dos departamentos.
+- Estabelecer relacionamentos entre departamentos e vendedores.
 
-## Database Integration
+## Integração com o Banco de Dados
 
-The application uses **JDBC** to establish communication between Java and MySQL.
+A aplicação utiliza **JDBC** para estabelecer a comunicação entre Java e MySQL.
 
-The database layer is responsible for:
+A camada de acesso ao banco de dados é responsável por:
 
-* Opening database connections
-* Executing SQL statements
-* Using `PreparedStatement`
-* Processing query results with `ResultSet`
-* Handling database exceptions
-* Closing database resources
+- Abrir conexões com o banco de dados.
+- Executar comandos SQL.
+- Utilizar `PreparedStatement` para executar consultas e operações.
+- Processar resultados de consultas com `ResultSet`.
+- Tratar exceções relacionadas ao banco de dados.
+- Fechar os recursos utilizados nas operações.
 
-## DAO Pattern
+## Padrão de Projeto DAO
 
-The project uses the **DAO (Data Access Object)** pattern to separate database access logic from the application's entities and other components.
+O projeto utiliza o padrão **DAO (Data Access Object)** para separar a lógica de acesso ao banco de dados das entidades da aplicação e de outros componentes.
 
-The main flow is:
+O fluxo principal funciona da seguinte forma:
 
 ```text
-Application
-     ↓
+Aplicação
+    ↓
 DaoFactory
-     ↓
+    ↓
 DAO
-     ↓
+    ↓
 JDBC
-     ↓
+    ↓
 MySQL
 ```
 
-This separation makes the application more organized and allows database operations to remain concentrated in the DAO layer.
+Essa separação contribui para uma melhor organização do código e mantém as operações de acesso ao banco de dados concentradas na camada DAO.
 
-## Concepts Practiced
+## Conceitos Praticados
 
-During the development of this project, I practiced:
+Durante o desenvolvimento deste projeto, pratiquei os seguintes conceitos:
 
-* Java Object-Oriented Programming
-* Classes and objects
-* Interfaces
-* Polymorphism
-* Collections
-* Generics
-* JDBC
-* SQL
-* MySQL
-* `Connection`
-* `PreparedStatement`
-* `ResultSet`
-* CRUD operations
-* Database relationships
-* Exception handling
-* DAO Pattern
-* Layered application structure
+- Programação Orientada a Objetos em Java.
+- Classes e objetos.
+- Interfaces.
+- Polimorfismo.
+- Coleções.
+- Generics.
+- JDBC.
+- SQL e MySQL.
+- `Connection`.
+- `PreparedStatement`.
+- `ResultSet`.
+- Operações CRUD (criação, consulta, atualização e exclusão).
+- Relacionamentos entre dados.
+- Tratamento de exceções.
+- Padrão de projeto DAO.
+- Organização de aplicações em camadas.
 
-## How to Run
+## Como Executar o Projeto
 
-### 1. Clone the repository
+### 1. Clonar o repositório
 
 ```bash
 git clone https://github.com/joaopascoal1v-sudo/Projeto-jdbc.git
 ```
 
-### 2. Configure MySQL
+### 2. Configurar o MySQL
 
-Create the required database and tables in MySQL.
+Crie o banco de dados e as tabelas necessárias para a execução da aplicação.
 
-### 3. Configure the database connection
+### 3. Configurar a conexão com o banco de dados
 
-Configure the database connection according to your local MySQL environment.
+Configure os parâmetros de conexão de acordo com o ambiente local do MySQL.
 
-Do not commit real passwords or sensitive database credentials to the repository.
+**Importante:** não publique senhas reais nem credenciais confidenciais no repositório.
 
-### 4. Run the application
+### 4. Executar a aplicação
 
-Open the project in Eclipse and run the application classes located in:
+Abra o projeto no Eclipse e execute uma das classes principais localizadas no diretório:
 
 ```text
 src/application/
 ```
 
-## Learning Purpose
+## Objetivo de Aprendizado
 
-This project is part of my learning journey in Java and database integration.
+Este projeto faz parte da minha jornada de aprendizado em Java e integração com bancos de dados.
 
-The main objective was to understand how a Java application communicates with a relational database and how different layers of an application can be organized.
+O principal objetivo foi compreender como uma aplicação Java se comunica com um banco de dados relacional e como diferentes camadas podem ser organizadas para separar responsabilidades.
 
-Through this project, I practiced concepts such as **JDBC, SQL, CRUD operations, DAO, object-oriented programming, and database relationships**.
+Por meio deste projeto, pratiquei conceitos fundamentais como **JDBC, SQL, operações CRUD, DAO, programação orientada a objetos e relacionamentos entre dados**.
 
-## Course Reference
+## Referência do Curso
 
-This project was developed while following the **Java COMPLETO Programação Orientada a Objetos + Projetos** course by **Nelio Alves**, available on Udemy.
+Projeto desenvolvido durante os estudos do curso **Java COMPLETO: Programação Orientada a Objetos + Projetos**, ministrado por **Nelio Alves** e disponível na Udemy.
 
-The project is published here for **educational and portfolio purposes**, representing my practical learning process.
+O repositório é publicado para fins educacionais e de portfólio, demonstrando minha evolução prática no aprendizado de Java.
 
-## Future Improvements
+## Melhorias Futuras
 
-As I continue developing my skills, this project may be extended with additional features and improvements, such as:
+Conforme avanço nos estudos, pretendo ampliar e aprimorar o projeto com funcionalidades e melhorias, como:
 
-* Input validation
-* Better exception handling
-* Automated tests
-* Search and filtering improvements
-* Additional business rules
-* REST API integration
-* Docker configuration
-* Improved documentation
+- Validação de dados de entrada.
+- Aprimoramento do tratamento de exceções.
+- Implementação de testes automatizados.
+- Melhorias nas funcionalidades de busca e filtragem.
+- Inclusão de regras de negócio adicionais.
+- Integração com uma API REST.
+- Configuração com Docker.
+- Aprimoramento da documentação.
 
-## Author
+## Autor
 
 **João Pascoal**
 
-GitHub:
-https://github.com/joaopascoal1v-sudo
+GitHub: https://github.com/joaopascoal1v-sudo
